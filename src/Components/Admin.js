@@ -14,14 +14,12 @@ function Admin() {
 
   const handleLogin = () => {
     // Check if the entered credentials are correct
-    if (credentials.username === "admin" && credentials.password === "sar123") {
+    if (credentials.username === "admin" && credentials.password === "abc123") {
       setAuthenticated(true);
     } else {
       alert("Invalid username or password. Please try again.");
     }
   };
-
-
 
   const getViewComponent = () => {
     switch (adminType) {
@@ -82,11 +80,10 @@ function Admin() {
         // Show admin panel if authenticated
         <div className="row">
           <div className="col-md-3 d-flex flex-column">
-            <Admnu setAuthenticated={setAuthenticated}/>
+            <Admnu setAuthenticated={setAuthenticated} />
           </div>
           <div className="col-md-9" style={{ marginTop: '6em', marginLeft: '-2rem' }}>
             {getViewComponent()}
-           
           </div>
         </div>
       )}
@@ -95,4 +92,3 @@ function Admin() {
 }
 
 export default Admin;
-  
